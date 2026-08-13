@@ -3,5 +3,5 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "22.12.0"
+  NODE_VERSION = "24.18.0"
   PNPM_FLAGS = "--frozen-lockfile"
