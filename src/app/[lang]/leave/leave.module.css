@@ -1,0 +1,174 @@
+.metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.65fr) minmax(0, 1.35fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.stack {
+  display: grid;
+  gap: 18px;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form label {
+  display: grid;
+  gap: 5px;
+  font-weight: 650;
+}
+
+.form input,
+.form select,
+.form textarea,
+.yearFilter select,
+.rejectForm input {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  color: var(--neutral-black);
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+}
+
+.form textarea {
+  min-height: 78px;
+  resize: vertical;
+}
+
+.primaryButton,
+.secondaryButton,
+.approveButton,
+.rejectButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 39px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 750;
+}
+
+.primaryButton { color: #fff; background: var(--brand-primary); border: 1px solid var(--brand-primary); }
+.secondaryButton { color: var(--brand-primary); background: var(--surface-card); border: 1px solid var(--neutral-200); }
+.approveButton { color: #fff; background: #28754d; border: 1px solid #28754d; }
+.rejectButton { color: #983d22; background: #fff0e9; border: 1px solid #e5aa97; }
+
+.hint,
+.muted {
+  margin: 0;
+  color: var(--neutral-700);
+}
+
+.status {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: var(--brand-primary);
+  background: var(--surface-info);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.status[data-status="APPROVED"] { color: #1f6d43; background: #e7f7ee; }
+.status[data-status="SUBMITTED"] { color: #8a4b00; background: var(--surface-warning); }
+.status[data-status="REJECTED"],
+.status[data-status="CANCELLED"] { color: #9a3d22; background: #fff0e9; }
+
+.requestCard {
+  display: grid;
+  gap: 11px;
+  padding: 14px;
+  background: var(--surface-subtle);
+  border-radius: 11px;
+}
+
+.requestHeader,
+.requestMeta,
+.reviewActions,
+.yearFilter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+.requestMeta {
+  justify-content: flex-start;
+  color: var(--neutral-700);
+  font-size: 0.86rem;
+}
+
+.requestCard p {
+  margin: 0;
+}
+
+.reviewActions {
+  justify-content: flex-start;
+}
+
+.rejectForm {
+  display: flex;
+  flex: 1;
+  min-width: 280px;
+  gap: 7px;
+}
+
+.rejectForm input {
+  min-width: 170px;
+}
+
+.balanceList {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.balanceRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.balanceRow:last-child {
+  border-bottom: 0;
+}
+
+.balanceRow strong,
+.balanceRow span {
+  display: block;
+}
+
+.balanceRow span {
+  color: var(--neutral-700);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 1000px) {
+  .layout { grid-template-columns: 1fr; }
+  .metrics { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 620px) {
+  .formGrid,
+  .metrics { grid-template-columns: 1fr; }
+  .rejectForm { min-width: 0; flex-direction: column; }
+}

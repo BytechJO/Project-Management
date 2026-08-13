@@ -1,0 +1,70 @@
+.dangerZone {
+  align-items: center;
+  background: #fff7f5;
+  border: 1px solid #e7b7ad;
+  border-radius: 18px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 20px;
+}
+
+.dangerZone h2 {
+  color: #842f25;
+  font-size: 1rem;
+  margin: 0 0 6px;
+}
+
+.dangerZone p {
+  color: #6d4a44;
+  margin: 0;
+  max-width: 680px;
+}
+
+.deleteButton {
+  background: #a63a3a;
+  border: 1px solid #8d2d2d;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 11px 16px;
+  white-space: nowrap;
+}
+
+.confirmation {
+  align-items: flex-start;
+  color: #6d4a44;
+  display: flex;
+  font-size: 0.86rem;
+  gap: 8px;
+  margin-bottom: 10px;
+  max-width: 320px;
+}
+
+.confirmation input {
+  accent-color: #a63a3a;
+  margin-top: 3px;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background: #8d2d2d;
+}
+
+.deleteButton:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 720px) {
+  .dangerZone {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .deleteButton {
+    width: 100%;
+  }
+}

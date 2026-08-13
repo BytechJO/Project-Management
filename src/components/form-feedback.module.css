@@ -1,0 +1,19 @@
+.error,
+.success {
+  margin-bottom: 18px;
+  padding: 11px 13px;
+  border: 1px solid;
+  border-radius: 9px;
+}
+
+.error {
+  color: var(--status-danger);
+  background: #fff0f0;
+  border-color: #efb7b7;
+}
+
+.success {
+  color: var(--status-success);
+  background: #edf9f3;
+  border-color: #b8dfcb;
+}

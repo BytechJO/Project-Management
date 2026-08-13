@@ -1,0 +1,261 @@
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.summary article,
+.panel {
+  border: 1px solid var(--neutral-200);
+  background: #fff;
+  border-radius: 16px;
+}
+
+.summary article {
+  display: grid;
+  gap: 6px;
+  min-height: 104px;
+  padding: 18px;
+}
+
+.summary span,
+.panel p,
+.details dt,
+.details small {
+  color: var(--neutral-700);
+}
+
+.summary strong {
+  overflow-wrap: anywhere;
+  font-size: 1.1rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.panel {
+  padding: 20px;
+}
+
+.panelHeader,
+.panelHeader > div,
+.actions,
+.details div {
+  display: flex;
+  align-items: center;
+}
+
+.panelHeader {
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.panelHeader > div {
+  gap: 13px;
+}
+
+.panelHeader h2,
+.guideHeader h2 {
+  margin: 0;
+}
+
+.panelHeader p,
+.guideHeader p,
+.emptyState p,
+.disconnect p,
+.securityNote p,
+.steps p {
+  margin: 4px 0 0;
+}
+
+.microsoftMark {
+  display: grid;
+  grid-template-columns: repeat(2, 15px);
+  gap: 2px;
+}
+
+.microsoftMark i {
+  width: 15px;
+  height: 15px;
+}
+
+.microsoftMark i:nth-child(1) { background: #f25022; }
+.microsoftMark i:nth-child(2) { background: #7fba00; }
+.microsoftMark i:nth-child(3) { background: #00a4ef; }
+.microsoftMark i:nth-child(4) { background: #ffb900; }
+
+.status {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.status[data-connected="true"] {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.details {
+  display: grid;
+  margin: 0;
+}
+
+.details div {
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.details dd {
+  display: grid;
+  justify-items: end;
+  margin: 0;
+  overflow-wrap: anywhere;
+  text-align: end;
+  font-weight: 700;
+}
+
+.details small {
+  font-weight: 400;
+}
+
+.actions {
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.actions button,
+.primaryButton,
+.secondaryButton,
+.disconnect button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--brand-primary);
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.actions button,
+.primaryButton {
+  color: #fff;
+  background: var(--brand-primary);
+}
+
+.secondaryButton {
+  color: var(--brand-primary);
+  background: #fff;
+}
+
+.emptyState {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  padding: 28px 4px 8px;
+}
+
+.emptyState ul {
+  margin: 0;
+  padding-inline-start: 22px;
+}
+
+.emptyState code,
+.steps code {
+  overflow-wrap: anywhere;
+}
+
+.disconnect {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.disconnect summary {
+  color: #991b1b;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.disconnect button {
+  margin-top: 12px;
+  color: #991b1b;
+  border-color: #fecaca;
+  background: #fff7f7;
+}
+
+.connectionError {
+  margin-top: 16px;
+  padding: 12px;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  background: #fff7f7;
+  border-radius: 10px;
+}
+
+.guideHeader > span {
+  color: var(--brand-primary);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.steps {
+  display: grid;
+  gap: 16px;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.steps li > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--brand-primary);
+  background: #fff4e7;
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.securityNote {
+  padding: 14px;
+  border: 1px solid #bae6fd;
+  background: #f0f9ff;
+  border-radius: 12px;
+}
+
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .summary { grid-template-columns: 1fr; }
+  .panelHeader { align-items: flex-start; }
+  .details div { align-items: flex-start; flex-direction: column; }
+  .details dd { justify-items: start; text-align: start; }
+}

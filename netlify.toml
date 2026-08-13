@@ -1,0 +1,7 @@
+[build]
+  command = "pnpm run netlify:build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22.12.0"
+  PNPM_FLAGS = "--frozen-lockfile"

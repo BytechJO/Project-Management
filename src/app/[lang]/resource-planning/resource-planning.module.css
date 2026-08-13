@@ -1,0 +1,194 @@
+.weekFilter,
+.weekNavigation,
+.employeeHeader,
+.loadNumbers,
+.taskHeader,
+.taskMeta,
+.scheduleForm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+}
+
+.weekFilter {
+  justify-content: flex-end;
+}
+
+.weekFilter label {
+  display: grid;
+  gap: 4px;
+  color: var(--neutral-700);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.weekFilter input,
+.scheduleForm input {
+  min-height: 39px;
+  padding: 7px 9px;
+  color: var(--neutral-black);
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+}
+
+.weekNavigation a,
+.weekFilter button,
+.scheduleForm button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 39px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.weekNavigation a,
+.weekFilter button {
+  color: var(--brand-primary);
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+}
+
+.scheduleForm button {
+  color: #fff;
+  background: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(350px, 0.55fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.stack,
+.employeeList,
+.taskList {
+  display: grid;
+  min-width: 0;
+  gap: 13px;
+}
+
+.employeeCard,
+.taskCard {
+  padding: 14px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--neutral-200);
+  border-radius: 11px;
+}
+
+.employeeHeader,
+.taskHeader {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.employeeHeader span,
+.taskHeader span,
+.taskMeta,
+.loadNumbers,
+.muted {
+  color: var(--neutral-700);
+}
+
+.employeeHeader strong,
+.employeeHeader span,
+.taskHeader strong,
+.taskHeader span {
+  display: block;
+}
+
+.status {
+  display: inline-flex !important;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #1f6d43 !important;
+  background: #e7f7ee;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.status[data-status="NEAR_CAPACITY"] {
+  color: #8a4b00 !important;
+  background: var(--surface-warning);
+}
+
+.status[data-status="OVERLOADED"] {
+  color: #9a3d22 !important;
+  background: #fff0e9;
+}
+
+.loadTrack {
+  height: 9px;
+  margin: 12px 0 7px;
+  overflow: hidden;
+  background: var(--surface-card);
+  border-radius: 999px;
+}
+
+.loadTrack div {
+  height: 100%;
+  background: #4fa171;
+  border-radius: inherit;
+}
+
+.loadTrack div[data-status="NEAR_CAPACITY"] { background: var(--brand-secondary); }
+.loadTrack div[data-status="OVERLOADED"] { background: #c75b3b; }
+
+.loadNumbers {
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.taskCard[data-risk="true"] {
+  border-inline-start: 4px solid #c75b3b;
+}
+
+.taskMeta {
+  margin: 9px 0 12px;
+  font-size: 0.83rem;
+}
+
+.taskMeta span:not(:last-child)::after {
+  content: "·";
+  margin-inline-start: 9px;
+}
+
+.scheduleForm {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(90px, 1fr)) auto;
+  align-items: end;
+}
+
+.scheduleForm label {
+  display: grid;
+  gap: 4px;
+  color: var(--neutral-700);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.empty {
+  margin: 0;
+  color: var(--neutral-700);
+}
+
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .scheduleForm { grid-template-columns: 1fr 1fr; }
+  .scheduleForm button { grid-column: 1 / -1; }
+}
+
+@media (max-width: 560px) {
+  .weekFilter { justify-content: flex-start; }
+  .scheduleForm { grid-template-columns: 1fr; }
+}

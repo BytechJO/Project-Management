@@ -1,0 +1,198 @@
+.filterPanel {
+  margin-bottom: 18px;
+}
+
+.filterForm {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.65fr) minmax(190px, 1fr) minmax(190px, 1fr) auto;
+  align-items: end;
+  gap: 10px;
+}
+
+.filterForm label,
+.calendarForm label {
+  display: grid;
+  gap: 5px;
+  color: var(--neutral-black);
+  font-weight: 650;
+}
+
+.filterForm input,
+.filterForm select,
+.calendarForm input,
+.calendarForm select,
+.calendarForm textarea {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  color: var(--neutral-black);
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+}
+
+.filterButton,
+.dangerButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.filterButton {
+  color: #fff;
+  background: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+}
+
+.dangerButton {
+  min-height: 34px;
+  color: #983d22;
+  background: #fff0e9;
+  border: 1px solid #e5aa97;
+}
+
+.metricGrid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.metricUnavailable {
+  color: var(--neutral-700);
+  font-size: 1.1rem !important;
+}
+
+.positive {
+  color: #1f6d43;
+}
+
+.negative {
+  color: #a13f24;
+}
+
+.sectionStack {
+  display: grid;
+  gap: 18px;
+}
+
+.cellMain,
+.cellMeta {
+  display: block;
+}
+
+.cellMeta {
+  margin-top: 2px;
+  color: var(--neutral-700);
+  font-size: 0.8rem;
+}
+
+.statusPill {
+  display: inline-flex;
+  padding: 3px 8px;
+  color: var(--brand-primary);
+  background: var(--surface-info);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 18px;
+}
+
+.calendarForm {
+  display: grid;
+  gap: 11px;
+  padding: 14px;
+  background: var(--surface-subtle);
+  border-radius: 10px;
+}
+
+.calendarForm textarea {
+  min-height: 68px;
+  resize: vertical;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.checkbox {
+  display: flex !important;
+  align-items: center;
+  grid-auto-flow: column;
+  justify-content: start;
+}
+
+.checkbox input {
+  width: 17px;
+  min-height: 17px;
+}
+
+.recordList {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.recordRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  background: var(--surface-subtle);
+  border-radius: 9px;
+}
+
+.recordRow strong,
+.recordRow span {
+  display: block;
+}
+
+.recordRow span {
+  color: var(--neutral-700);
+  font-size: 0.82rem;
+}
+
+.privacyNote {
+  padding: 11px 13px;
+  color: var(--neutral-700);
+  background: var(--surface-info);
+  border-radius: 9px;
+}
+
+@media (max-width: 1100px) {
+  .filterForm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .metricGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .calendarGrid,
+  .filterForm,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metricGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 440px) {
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+}

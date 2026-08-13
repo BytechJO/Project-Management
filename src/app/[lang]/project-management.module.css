@@ -1,0 +1,433 @@
+.twoColumn {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(310px, 0.85fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.headerButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.form {
+  display: grid;
+  gap: 13px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form label {
+  display: grid;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.form input,
+.form select,
+.form textarea,
+.inlineForm select {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  color: var(--neutral-black);
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+}
+
+.form textarea {
+  min-height: 78px;
+  resize: vertical;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.empty {
+  margin: 0;
+  padding: 18px 0;
+  color: var(--neutral-700);
+}
+
+.projectLink {
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+.projectLink:hover {
+  text-decoration: underline;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.summaryCard {
+  padding: 15px;
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+}
+
+.summaryCard span,
+.summaryCard strong {
+  display: block;
+}
+
+.summaryCard span {
+  color: var(--neutral-700);
+}
+
+.summaryCard strong {
+  margin-top: 3px;
+  font-size: 1.2rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.75fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.stack {
+  display: grid;
+  gap: 18px;
+}
+
+.memberList {
+  display: grid;
+  gap: 9px;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px;
+  background: var(--surface-subtle);
+  border-radius: 9px;
+}
+
+.member span,
+.taskMeta {
+  color: var(--neutral-700);
+}
+
+.inlineForm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 190px;
+}
+
+.statusForm,
+.taskActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.taskActions {
+  flex-wrap: wrap;
+}
+
+.timerBanner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  color: #ffffff;
+  background: var(--brand-primary);
+  border-radius: 12px;
+}
+
+.timerBanner div {
+  display: grid;
+}
+
+.timerBanner span {
+  color: rgb(255 255 255 / 76%);
+}
+
+.timerBanner > strong {
+  min-width: 86px;
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.timerButton,
+.stopButton {
+  min-height: 38px;
+  padding: 7px 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.timerButton {
+  color: #ffffff;
+  background: var(--brand-tertiary);
+  border: 1px solid var(--brand-tertiary);
+}
+
+.stopButton {
+  color: #693100;
+  background: var(--brand-secondary);
+  border: 1px solid var(--brand-secondary);
+}
+
+.timerBusy {
+  color: var(--neutral-700);
+  font-size: 0.85rem;
+}
+
+.inlineForm select {
+  min-width: 130px;
+}
+
+.smallButton {
+  min-height: 38px;
+  padding: 7px 10px;
+  color: #ffffff;
+  background: var(--brand-primary);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: var(--brand-primary);
+}
+
+.taskLink {
+  color: var(--neutral-black);
+  text-decoration: none;
+}
+
+.taskLink:hover {
+  color: var(--brand-primary);
+  text-decoration: underline;
+}
+
+.kanbanSection {
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.projectFilesPanel {
+  margin-bottom: 18px;
+}
+
+.projectFileList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.projectFileList a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px;
+  color: var(--neutral-black);
+  background: var(--surface-subtle);
+  border: 1px solid var(--neutral-200);
+  border-radius: 9px;
+  text-decoration: none;
+}
+
+.projectFileList a:hover {
+  border-color: var(--brand-primary);
+}
+
+.projectFileList a > span {
+  color: var(--brand-primary);
+  font-size: 1.25rem;
+}
+
+.projectFileList strong,
+.projectFileList small {
+  display: block;
+}
+
+.projectFileList small {
+  margin-top: 2px;
+  color: var(--neutral-700);
+}
+
+.fileUploadForm {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+
+.fileUploadForm label {
+  display: grid;
+  flex: 1;
+  gap: 5px;
+  color: var(--neutral-700);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.fileUploadForm input {
+  min-height: 42px;
+  padding: 8px 10px;
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-300);
+  border-radius: 8px;
+}
+
+.fileUploadForm small {
+  font-weight: 400;
+}
+
+.kanbanBoard {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(210px, 1fr));
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.kanbanColumn {
+  min-height: 180px;
+  padding: 10px;
+  background: var(--surface-subtle);
+  border-radius: 10px;
+}
+
+.kanbanColumn > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 9px;
+  color: var(--neutral-700);
+  font-size: 0.86rem;
+}
+
+.kanbanColumn > header span {
+  display: grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  background: var(--surface-card);
+  border-radius: 999px;
+}
+
+.kanbanCards {
+  display: grid;
+  gap: 8px;
+}
+
+.kanbanCard {
+  display: grid;
+  gap: 7px;
+  padding: 11px;
+  color: var(--neutral-black);
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+  border-radius: 9px;
+  text-decoration: none;
+  box-shadow: 0 2px 7px rgb(20 45 70 / 5%);
+}
+
+.kanbanCard:hover {
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+.kanbanCard small {
+  color: var(--neutral-700);
+}
+
+.kanbanCard footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 7px;
+  color: var(--neutral-700);
+  border-top: 1px solid var(--neutral-200);
+  font-size: 0.75rem;
+}
+
+.kanbanPriority {
+  justify-self: start;
+  color: var(--brand-primary);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.kanbanPriority[data-priority="HIGH"],
+.kanbanPriority[data-priority="URGENT"] {
+  color: #a85400;
+}
+
+.kanbanEmpty {
+  padding: 22px 8px;
+  color: var(--neutral-700);
+  text-align: center;
+  border: 1px dashed var(--neutral-200);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1040px) {
+  .twoColumn,
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .formGrid,
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .inlineForm {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .fileUploadForm {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .timerBanner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .timerBanner form {
+    grid-column: 1 / -1;
+  }
+
+  .timerBanner button {
+    width: 100%;
+  }
+}

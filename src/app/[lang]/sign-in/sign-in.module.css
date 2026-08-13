@@ -1,0 +1,50 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, rgb(73 151 194 / 18%), transparent 32%),
+    radial-gradient(circle at 85% 75%, rgb(239 125 0 / 14%), transparent 30%),
+    var(--surface-canvas);
+}
+
+.card {
+  display: grid;
+  gap: 22px;
+  width: min(100%, 430px);
+  padding: clamp(24px, 5vw, 38px);
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgb(53 66 83 / 12%);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brandLogo {
+  display: block;
+  width: 182px;
+  height: auto;
+}
+
+.card h1,
+.card p {
+  margin: 0;
+}
+
+.card h1 {
+  font-size: 1.8rem;
+}
+
+.card p {
+  color: var(--neutral-700);
+}
+
+.language {
+  color: var(--brand-primary);
+  text-align: center;
+}

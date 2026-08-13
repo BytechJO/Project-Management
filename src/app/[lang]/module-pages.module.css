@@ -1,0 +1,358 @@
+.summaryThree {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.statusActions {
+  display: flex;
+  gap: 7px;
+}
+
+.pendingStatus {
+  color: #a85400;
+  font-weight: 600;
+}
+
+.timesheetLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.65fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.activeTimer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  color: #ffffff;
+  background: var(--brand-primary);
+  border-radius: 12px;
+}
+
+.activeTimer div {
+  display: grid;
+}
+
+.activeTimer span {
+  color: rgb(255 255 255 / 76%);
+}
+
+.activeTimer > strong {
+  min-width: 86px;
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.stopTimerButton {
+  min-height: 40px;
+  padding: 8px 13px;
+  color: #693100;
+  background: var(--brand-secondary);
+  border: 1px solid var(--brand-secondary);
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.timerSubmissionWarning {
+  margin: 16px 0 0;
+  color: #8a4600;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.rejectionReason {
+  padding: 11px 13px;
+  color: #8a4600;
+  background: var(--surface-warning);
+  border-radius: 9px;
+}
+
+.approvalPanel {
+  margin-top: 18px;
+}
+
+.approvalList {
+  display: grid;
+  gap: 12px;
+}
+
+.approvalCard {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--neutral-200);
+  border-radius: 11px;
+}
+
+.approvalDetails {
+  display: grid;
+  grid-template-columns: auto minmax(180px, 1fr) minmax(90px, auto) minmax(120px, auto);
+  gap: 12px;
+  align-items: center;
+}
+
+.approvalDetails > div {
+  display: grid;
+}
+
+.approvalDetails span,
+.approvalDetails small {
+  color: var(--neutral-700);
+}
+
+.reviewActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.returnForm {
+  display: flex;
+  gap: 8px;
+}
+
+.returnForm input {
+  min-width: 250px;
+  min-height: 40px;
+  padding: 8px 10px;
+  color: var(--neutral-black);
+  background: var(--surface-card);
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 1px;
+  overflow-x: auto;
+  background: var(--neutral-200);
+  border: 1px solid var(--neutral-200);
+  border-radius: 13px;
+}
+
+.day {
+  min-height: 360px;
+  padding: 14px;
+  background: var(--surface-card);
+}
+
+.today {
+  box-shadow: inset 0 3px 0 var(--brand-secondary);
+}
+
+.dayHeader {
+  display: grid;
+  margin-bottom: 16px;
+}
+
+.dayHeader span,
+.event span,
+.deadline span,
+.holiday span,
+.leave span,
+.workload span {
+  color: var(--neutral-700);
+}
+
+.event,
+.deadline,
+.holiday,
+.leave,
+.workload {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: var(--neutral-black);
+  text-decoration: none;
+  border-inline-start: 3px solid var(--brand-tertiary);
+  border-radius: 7px;
+}
+
+.event {
+  background: var(--surface-info);
+}
+
+.deadline {
+  background: var(--surface-warning);
+  border-color: var(--brand-secondary);
+}
+
+.holiday {
+  background: color-mix(in srgb, var(--brand-secondary) 12%, var(--surface-card));
+  border-color: var(--brand-secondary);
+}
+
+.leave {
+  background: color-mix(in srgb, var(--brand-primary) 10%, var(--surface-card));
+  border-color: var(--brand-primary);
+}
+
+.workload {
+  background: color-mix(in srgb, var(--brand-tertiary) 13%, var(--surface-card));
+  border-color: var(--brand-tertiary);
+}
+
+.event strong,
+.deadline strong,
+.holiday strong,
+.leave strong,
+.workload strong,
+.event span,
+.deadline span,
+.holiday span,
+.leave span,
+.workload span {
+  display: block;
+}
+
+.event:hover strong,
+.deadline:hover strong,
+.leave:hover strong,
+.workload:hover strong {
+  color: var(--brand-primary);
+}
+
+.emptyDay {
+  margin: 0;
+  color: var(--neutral-700);
+  font-size: 0.9rem;
+}
+
+.financeGrid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: 16px;
+}
+
+.financeTable {
+  margin-top: 18px;
+}
+
+.costList {
+  display: grid;
+  gap: 13px;
+}
+
+.costRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.costTotal {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 13px;
+  border-top: 1px solid var(--neutral-200);
+  font-weight: 700;
+}
+
+.allocationBar {
+  display: flex;
+  height: 38px;
+  margin: 20px 0 12px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.allocationBar span:nth-child(1) {
+  width: 52%;
+  background: var(--brand-primary);
+}
+
+.allocationBar span:nth-child(2) {
+  width: 17%;
+  background: var(--brand-tertiary);
+}
+
+.allocationBar span:nth-child(3) {
+  width: 31%;
+  background: var(--brand-secondary);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: var(--neutral-700);
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.legend span:nth-child(1) i {
+  background: var(--brand-primary);
+}
+
+.legend span:nth-child(2) i {
+  background: var(--brand-tertiary);
+}
+
+.legend span:nth-child(3) i {
+  background: var(--brand-secondary);
+}
+
+@media (max-width: 900px) {
+  .financeGrid,
+  .timesheetLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .approvalDetails {
+    grid-template-columns: auto 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .summaryThree {
+    grid-template-columns: 1fr;
+  }
+
+  .approvalDetails {
+    grid-template-columns: auto 1fr;
+  }
+
+  .reviewActions,
+  .returnForm {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .returnForm input {
+    min-width: 0;
+  }
+
+  .activeTimer {
+    grid-template-columns: 1fr auto;
+  }
+
+  .activeTimer form {
+    grid-column: 1 / -1;
+  }
+
+  .activeTimer button {
+    width: 100%;
+  }
+}
