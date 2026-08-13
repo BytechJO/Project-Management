@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm run netlify:build"
+  command = "pnpm exec prisma migrate deploy && pnpm run db:seed && pnpm run netlify:build"
   publish = ".next"
 
 [build.environment]
