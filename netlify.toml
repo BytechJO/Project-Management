@@ -5,3 +5,6 @@
 [build.environment]
   NODE_VERSION = "24.18.0"
   PNPM_FLAGS = "--frozen-lockfile"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
