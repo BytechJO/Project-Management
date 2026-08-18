@@ -1,0 +1,23 @@
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-block-start: 16px;
+}
+
+.pagination a {
+  width: fit-content;
+  color: var(--brand-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pagination a:last-child {
+  justify-self: end;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

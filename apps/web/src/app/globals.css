@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --brand-primary: #435266;
+  --brand-primary-strong: #354253;
+  --brand-secondary: #ef7d00;
+  --brand-tertiary: #4997c2;
+  --neutral-black: #171717;
+  --neutral-700: #5b5b5b;
+  --neutral-400: #a0a0a0;
+  --neutral-200: #dbdbdb;
+  --neutral-white: #ffffff;
+  --surface-canvas: #f5f7f9;
+  --surface-card: #ffffff;
+  --surface-subtle: #edf1f4;
+  --surface-info: #e9f5fb;
+  --surface-warning: #fff2df;
+  --status-success: #247a55;
+  --status-danger: #a63a3a;
+}
+
+@theme inline {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-tertiary: var(--brand-tertiary);
+  --color-background: var(--surface-canvas);
+  --color-foreground: var(--neutral-black);
+  --font-sans: var(--font-baloo-bhaijaan);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--surface-canvas);
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--neutral-black);
+  background: var(--surface-canvas);
+  font-family: var(--font-baloo-bhaijaan), Arial, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button[data-pending="true"] {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(73 151 194 / 45%);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--brand-primary);
+}
